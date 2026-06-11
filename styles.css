@@ -39,3 +39,11 @@ input {
     padding: 5px;
     text-align: center;
 }
+
+#select-fase {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
