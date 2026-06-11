@@ -1,49 +1,124 @@
-/* Reset básico para que los márgenes no molesten */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
 body {
-    background-color: #f4f4f9;
+    background-color: #0f172a;
+    color: #f8fafc;
     padding: 20px;
+    min-height: 100vh;
 }
 
-h1 {
+header h1 {
     text-align: center;
-    color: #333;
+    color: #38bdf8;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.controls {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-#contenedor-partidos {
-    max-width: 600px;
-    margin: 0 auto;
+#auth-container input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #475569;
+    background: #1e293b;
+    color: #fff;
+    width: 250px;
+    margin-right: 10px;
 }
 
-/* Estilo de cada tarjeta de partido */
-.partido-card {
-    background: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#auth-container button, #btn-submit-prode {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-input {
-    width: 60px;
-    padding: 5px;
-    text-align: center;
+#auth-container button:hover, #btn-submit-prode:hover {
+    background: #0ea5e9;
+}
+
+#btn-submit-prode:disabled {
+    background: #475569;
+    color: #94a3b8;
+    cursor: not-allowed;
 }
 
 #select-fase {
-    padding: 10px;
+    padding: 12px 24px;
     font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px solid #38bdf8;
+    background: #1e293b;
+    color: #f8fafc;
     cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+}
+
+#contenedor-partidos {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.partido-card {
+    background: #1e293b;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid #38bdf8;
+}
+
+.partido-info {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.partido-info small {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.marcador-inputs {
+    display: flex;
+    gap: 8px;
+}
+
+input[type="number"] {
+    width: 55px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: #38bdf8;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

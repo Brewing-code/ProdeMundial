@@ -1,18 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prode Mundial 2026</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-    <h1>Prode Mundial 2026</h1>
+    <header>
+        <h1>Prode Mundial 2026</h1>
+    </header>
 
-    <div style="text-align: center; margin-bottom: 20px;">
+    <div id="auth-container" class="controls">
+        <input type="email" id="auth-email" placeholder="Tu correo electrónico">
+        <button id="btn-login">Ingresar / Registrarse</button>
+        <span id="user-display" style="display:none; margin-left:10px;"></span>
+    </div>
+
+    <div class="controls" id="fase-controls" style="display:none;">
         <select id="select-fase">
-            <option value="fase-grupos">Fase de Grupos</option>
-            <option value="octavos">Octavos de Final</option>
-            <option value="cuartos">Cuartos de Final</option>
+            <optgroup label="Fase de Grupos">
+                <option value="zona-a">Zona A</option>
+                <option value="zona-b">Zona B</option>
+                <option value="zona-c">Zona C</option>
+                <option value="zona-d">Zona D</option>
+                <option value="zona-e">Zona E</option>
+                <option value="zona-f">Zona F</option>
+                <option value="zona-g">Zona G</option>
+                <option value="zona-h">Zona H</option>
+                <option value="zona-i">Zona I</option>
+                <option value="zona-j">Zona J</option>
+                <option value="zona-k">Zona K</option>
+                <option value="zona-l">Zona L</option>
+            </optgroup>
+            <optgroup label="Fases de Eliminación">
+                <option value="dieciseisavos">Dieciseisavos de Final</option>
+                <option value="octavos">Octavos de Final</option>
+                <option value="cuartos">Cuartos de Final</option>
+                <option value="semifinales">Semifinales</option>
+                <option value="final">Final del Mundial</option>
+            </optgroup>
         </select>
     </div>
 
     <main id="app">
-        <div id="contenedor-partidos">
-            </div>
+        <div id="contenedor-partidos"></div>
+        
+        <div id="submit-container" style="text-align: center; margin: 30px 0; display: none;">
+            <button id="btn-submit-prode">Enviar Predicciones Definitivas</button>
+            <p id="error-message" style="color: #e94560; margin-top: 10px; font-weight: bold;"></p>
+        </div>
     </main>
 
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    
     <script src="app.js"></script>
 </body>
+</body>
+</html>
